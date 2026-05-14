@@ -7,7 +7,7 @@ GaussianBlurNode::GaussianBlurNode()
 
 {
     sub_ = this->create_subscription<sensor_msgs::msg::Image>(
-        "image_raw",
+        "camera/image_raw",
         10,
         std::bind(&GaussianBlurNode::image_callback, this, std::placeholders::_1)
     );
@@ -30,6 +30,8 @@ void GaussianBlurNode::image_callback(sensor_msgs::msg::Image::SharedPtr msg)
 
     cv::Mat blurred;
     cv::GaussianBlur(cv_image, blurred, cv::Size(15, 15), 0);
+
+
 
     auto blur_msg = cv_bridge::CvImage(msg->header, "bgr8", blurred).toImageMsg();
     pub_->publish(*blur_msg);
