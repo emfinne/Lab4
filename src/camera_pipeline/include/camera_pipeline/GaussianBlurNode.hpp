@@ -1,0 +1,8 @@
+//
+// Created by parallels on 5/14/26.
+//
+
+#ifndef LAB4_GAUSSIANBLURNODE_HPP
+#define LAB4_GAUSSIANBLURNODE_HPP
+
+#endif //LAB4_GAUSSIANBLURNODE_HPP
