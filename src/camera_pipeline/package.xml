@@ -12,6 +12,7 @@
 
   <buildtool_depend>rclcpp</buildtool_depend>
   <buildtool_depend>opencv</buildtool_depend>
+  <buildtool_depend>cv_bridge</buildtool_depend>
 
 
   <export>

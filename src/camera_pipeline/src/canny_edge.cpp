@@ -1,6 +1,3 @@
-//
-// Created by aleks on 14.05.2026.
-//
 #include <memory>
 
 #include "rclcpp/rclcpp.hpp"

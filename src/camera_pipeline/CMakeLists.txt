@@ -20,6 +20,16 @@ add_executable(canny_edge
         src/canny_edge.cpp
 )
 
+target_include_directories(GaussianBlurNode PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
+target_include_directories(canny_edge PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
+)
+
 ament_target_dependencies(
         GaussianBlurNode
         rclcpp
